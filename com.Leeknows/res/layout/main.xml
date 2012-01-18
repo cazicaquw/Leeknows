@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/shuimo1">
+    <TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:stretchColumns="1"
+		android:paddingLeft="12dip"
+    	android:paddingRight="12dip">   
+		<TableRow>
+		<EditText
+        android:id="@+id/E_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/Plsinput" 
+        android:layout_column="1"/>
+   		<Button
+        android:id="@+id/B_confirm"
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:background="@drawable/button_press"
+        android:onClick="onclick_confirm"
+        android:text="@string/Btn_Search"
+        android:textColor="@android:color/black"
+        android:textSize="11pt" />
+		</TableRow>
+	</TableLayout>
+    <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="12dip"
+    android:paddingRight="12dip"
+    >
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/B_confirm"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="书名" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="作者" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主题" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/aboutauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dip"
+        android:focusable="true"
+        android:background="@drawable/button_press"
+        android:onClick="onclick_aboutauthor"
+        android:text="@string/aboutautor"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/book_store"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+     	android:layout_below="@+id/radioGroup1"
+        android:focusable="true"
+        android:background="@drawable/button_press"
+        android:onClick="onclick_store"
+        android:text="收藏夹"
+        android:textColor="@android:color/black"
+        android:textSize="15dip" />
+    <TextView 
+        android:id="@+id/abouttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        android:background="@drawable/text1"
+        android:layout_above="@+id/aboutauthor"
+        android:text = "@string/abouttext"
+        />
+
+    <Button
+        android:id="@+id/Mylibrary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/book_store"
+        android:text="@string/Mylib"
+        android:textSize="15dip"
+        android:focusable="true"
+        android:background="@drawable/button_press"
+        android:onClick="onclick_mylib" />
+
+</RelativeLayout>
+</LinearLayout>
