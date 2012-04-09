@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout   
+    android:id="@+id/myliblayout"   
+    android:layout_width="fill_parent"   
+    android:background="@drawable/shuimo1"
+    xmlns:android="http://schemas.android.com/apk/res/android"   
+    android:layout_height="fill_parent" 
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"  >  
+  
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mylib_lend"
+        android:text="@string/mylib_lend"
+        android:textSize="18dip"
+        android:textColor="@android:color/white"
+        android:background="@drawable/text1"/>
+	<ListView 
+	    android:layout_width="wrap_content"   
+    	android:layout_height="wrap_content"   
+    	android:id="@+id/mylib_list"  
+          android:cacheColorHint="@android:color/transparent"
+          android:listSelector="@drawable/list_press"
+          android:layout_marginLeft="10dip"
+          android:layout_marginRight="10dip"
+          android:divider="@android:color/transparent"
+          android:dividerHeight="2dip"
+          android:visibility="invisible"
+    	android:layout_below="@+id/mylib_lend"
+          />
+	    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mylib_reserve"
+        android:text="@string/mylib_reserve"
+        android:textSize="18dip"
+        android:textColor="@android:color/white"
+        android:background="@drawable/text1"
+        android:layout_below="@+id/mylib_list"/>
+	    <ListView 
+	    android:layout_width="wrap_content"   
+    	android:layout_height="wrap_content"   
+    	android:id="@+id/mylib_listrev"  
+		android:cacheColorHint="@android:color/transparent"
+          android:listSelector="@drawable/list_press"
+          android:layout_marginLeft="10dip"
+          android:layout_marginRight="10dip"
+          android:divider="@android:color/transparent"
+          android:dividerHeight="2dip"
+          android:visibility="invisible"
+    	android:layout_below="@+id/mylib_reserve"
+          />
+
+</RelativeLayout>
